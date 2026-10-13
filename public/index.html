@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sahakar Maharshi Shankarrao Kolhe S.S.K. Ltd. | Sanjivani Sugar Factory, Kopargaon</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sanjivani: {
+              dark: '#082f1b',
+              primary: '#0f5132',
+              accent: '#f59e0b',
+              gold: '#eab308',
+              amber: '#d97706',
+              light: '#f0fdf4',
+              surface: '#ffffff'
+            }
+          },
+          fontFamily: {
+            sans: ['Outfit', 'Noto Sans Devanagari', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    
+    .chat-bubble-user {
+      background: linear-gradient(135deg, #0f5132 0%, #082f1b 100%);
+    }
+    .chat-bubble-bot {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+    }
+    .pulsing-dot {
+      animation: pulseAnimation 1.4s infinite ease-in-out both;
+    }
+    .pulsing-dot:nth-child(1) { animation-delay: -0.32s; }
+    .pulsing-dot:nth-child(2) { animation-delay: -0.16s; }
+    @keyframes pulseAnimation {
+      0%, 80%, 100% { transform: scale(0); }
+      40% { transform: scale(1.0); }
+    }
+
+    /* Keyframe Animations */
+    @keyframes floatAnimation {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-7px); }
+    }
+    .animate-float {
+      animation: floatAnimation 4.5s ease-in-out infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .animate-gradient-text {
+      background-size: 200% 200%;
+      animation: gradientShift 5s ease infinite;
+    }
+
+    @keyframes subtleGlow {
+      0%, 100% { box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.15), 0 8px 10px -6px rgba(16, 185, 129, 0.1); }
+      50% { box-shadow: 0 20px 35px -5px rgba(234, 179, 8, 0.22), 0 10px 15px -5px rgba(16, 185, 129, 0.2); }
+    }
+    .animate-glow {
+      animation: subtleGlow 4s ease-in-out infinite;
+    }
+
+    @keyframes popIn {
+      0% { opacity: 0; transform: translateY(8px) scale(0.97); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .animate-pop-in {
+      animation: popIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Smooth Hover Lift */
+    .interactive-card {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .interactive-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    /* Shimmer effect for badges */
+    .shimmer-badge {
+      position: relative;
+      overflow: hidden;
+    }
+    .shimmer-badge::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%; width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      animation: badgeShimmer 3s infinite;
+    }
+    @keyframes badgeShimmer {
+      0% { left: -100%; }
+      50%, 100% { left: 150%; }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+  <!-- Top Announcement Bar (Based on www.sanjivanisugarfactory.com) -->
+  <div class="bg-sanjivani-dark text-emerald-100 text-xs py-2 px-4 border-b border-emerald-900/60">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center space-x-3">
+        <span class="bg-yellow-400/20 text-yellow-300 px-2 py-0.5 rounded text-[10px] font-bold tracking-wider border border-yellow-400/30">REG NO: A.N.G./P.R.G./(G)/11 DT. 28-10-1960</span>
+        <span class="font-medium">सहकार महर्षी शंकरराव कोल्हे सहकारी साखर कारखाना लि., सहजानंदनगर (पूर्वीचा: द संजीवनी सा. का. लि.)</span>
+      </div>
+      <div class="flex items-center space-x-4 text-xs">
+        <span class="hidden sm:inline"><i class="fa-solid fa-phone text-yellow-400 mr-1"></i> +91 2423 222301 / 302</span>
+        <span><i class="fa-solid fa-envelope text-yellow-400 mr-1"></i> info@sanjivanisugarfactory.com</span>
+        <span class="hidden md:inline"><i class="fa-solid fa-location-dot text-yellow-400 mr-1"></i> Kopargaon, Dist. Ahilyanagar</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header (Clean, responsive layout with zero overlapping) -->
+  <header class="bg-white sticky top-0 z-40 shadow-sm border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo & Factory Name -->
+      <a href="#" class="flex items-center space-x-3 group min-w-0">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-700 via-green-800 to-emerald-950 flex items-center justify-center text-white shadow-md shadow-emerald-950/20 shrink-0">
+          <i class="fa-solid fa-seedling text-xl text-yellow-300"></i>
+        </div>
+        <div class="min-w-0">
+          <div class="flex items-center gap-2">
+            <h1 class="text-sm sm:text-base font-extrabold tracking-tight text-slate-900 truncate">
+              Sahakar Maharshi Shankarrao Kolhe S.S.K. Ltd.
+            </h1>
+            <span class="hidden md:inline-block text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full border border-emerald-300 shrink-0">
+              Kopargaon
+            </span>
+          </div>
+          <p class="text-xs text-emerald-800 font-semibold tracking-wide">
+            The Sanjivani Sugar Factory &bull; Sahajanandnagar
+          </p>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="hidden lg:flex items-center space-x-6 text-sm font-semibold text-slate-600 shrink-0">
+        <a href="#about" class="hover:text-emerald-700 transition">About Factory</a>
+        <a href="#leadership" class="hover:text-emerald-700 transition">Leadership</a>
+        <a href="#divisions" class="hover:text-emerald-700 transition">Industrial Divisions</a>
+        <a href="#records" class="hover:text-emerald-700 transition">Farmer Portal</a>
+        <a href="#contact" class="hover:text-emerald-700 transition">Contact</a>
+      </nav>
+
+
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-b from-sanjivani-dark via-emerald-950 to-slate-950 text-white overflow-hidden py-14 sm:py-20">
+    <!-- Subtle Background Ornament -->
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#eab308_1px,transparent_1px)] [background-size:28px_28px]"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <div class="lg:col-span-7 space-y-5" data-aos="fade-up" data-aos-duration="900">
+          <div class="inline-flex items-center gap-2 bg-yellow-400/20 border border-yellow-400/30 text-yellow-300 text-xs font-bold px-3 py-1.5 rounded-full shimmer-badge shadow-sm">
+            <i class="fa-solid fa-award text-yellow-400"></i>
+            <span>Pioneer Agro-Industrial Complex of Maharashtra &bull; Est. 1960</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+            Cooperative Excellence in <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-emerald-300 to-green-400 animate-gradient-text">Sugar, Ethanol & Green Energy</span>
+          </h2>
+
+          <p class="text-slate-300 text-sm sm:text-base max-w-2xl leading-relaxed">
+            Welcome to the official portal of <strong>Sahakar Maharshi Shankarrao Kolhe Sahakari Sakhar Karkhana Ltd. (The Sanjivani Group)</strong>. From 4,500 TCD sugar processing and green fuel ethanol to 30 MW co-generation and pharmaceuticals, we empower over 18,500 sugarcane farmers across Kopargaon and the Godavari basin.
+          </p>
+
+
+          <!-- Feature badges with subtle hover animations -->
+          <div class="grid grid-cols-3 gap-3 pt-6 border-t border-white/10 text-xs">
+            <div class="flex items-center gap-2 hover:text-emerald-300 transition-colors duration-200">
+              <i class="fa-solid fa-leaf text-emerald-400 text-base"></i>
+              <span>Zero Liquid Discharge & CBG</span>
+            </div>
+            <div class="flex items-center gap-2 hover:text-yellow-300 transition-colors duration-200">
+              <i class="fa-solid fa-gas-pump text-yellow-400 text-base"></i>
+              <span>Fuel-Grade Ethanol 20% Blend</span>
+            </div>
+            <div class="flex items-center gap-2 hover:text-sky-300 transition-colors duration-200">
+              <i class="fa-solid fa-microchip text-sky-400 text-base"></i>
+              <span>MCP Protocol AI Assistant</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Factory Highlights Card with Float & Glow Animation -->
+        <div class="lg:col-span-5" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+          <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 shadow-2xl relative animate-float animate-glow">
+            <div class="flex items-center justify-between pb-4 border-b border-white/10">
+              <div>
+                <span class="text-sm font-extrabold tracking-wide uppercase text-yellow-300 block">Sanjivani Factory Profile</span>
+                <span class="text-[11px] text-slate-300">Official Operational Capacity</span>
+              </div>
+              <span class="bg-emerald-500/30 text-emerald-300 text-xs font-bold px-2.5 py-1 rounded border border-emerald-500/40 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                Active Season
+              </span>
+            </div>
+
+            <!-- Animated Number Counters -->
+            <div class="grid grid-cols-2 gap-3.5 my-5">
+              <div class="bg-black/25 p-3.5 rounded-xl border border-white/5 hover:border-emerald-500/30 transition">
+                <span class="text-slate-400 text-xs block">Sugar Crushing</span>
+                <span class="text-2xl font-bold text-white"><span class="counter" data-target="4500">4,500</span> <span class="text-xs font-normal text-slate-300">TCD</span></span>
+              </div>
+              <div class="bg-black/25 p-3.5 rounded-xl border border-white/5 hover:border-yellow-500/30 transition">
+                <span class="text-slate-400 text-xs block">Co-gen Green Power</span>
+                <span class="text-2xl font-bold text-yellow-400"><span class="counter" data-target="30">30</span> <span class="text-xs font-normal text-slate-300">MW</span></span>
+              </div>
+              <div class="bg-black/25 p-3.5 rounded-xl border border-white/5 hover:border-emerald-500/30 transition">
+                <span class="text-slate-400 text-xs block">Distillery & Ethanol</span>
+                <span class="text-2xl font-bold text-emerald-300"><span class="counter" data-target="100">100</span>+ <span class="text-xs font-normal text-slate-300">KLPD</span></span>
+              </div>
+              <div class="bg-black/25 p-3.5 rounded-xl border border-white/5 hover:border-white/20 transition">
+                <span class="text-slate-400 text-xs block">FRP Cane Rate</span>
+                <span class="text-2xl font-bold text-white">₹<span class="counter" data-target="3200">3,200</span> <span class="text-xs font-normal text-slate-300">/ MT</span></span>
+              </div>
+            </div>
+
+            <!-- Leadership status note -->
+            <div class="bg-emerald-950/70 p-3.5 rounded-xl border border-emerald-500/30 flex items-center justify-between text-xs">
+              <div>
+                <span class="font-bold text-emerald-200 block">Chairman: Shri. Vivek Bipin Kolhe</span>
+                <span class="text-slate-400 text-[11px]">Empowering Sugarcane Growers since 1960</span>
+              </div>
+              <span class="bg-yellow-400/20 text-yellow-300 border border-yellow-400/30 px-2.5 py-1 rounded-md text-[11px] font-bold">
+                Crushing Active
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================== -->
+  <!-- FOUNDER & LEADERSHIP SECTION (Directly from sanjivanisugarfactory.com) -->
+  <!-- ============================================================== -->
+  <section id="leadership" class="py-16 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
+        <span class="text-emerald-700 text-xs font-extrabold uppercase tracking-widest">Inspirations & Guidance</span>
+        <h3 class="text-3xl font-extrabold text-slate-900 mt-1">Pioneers of the Cooperative Revolution</h3>
+        <p class="text-slate-500 text-sm mt-2">
+          Transforming dry agrarian lands into Maharashtra's leading cooperative agro-industrial sugar and renewable energy powerhouse.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+        <!-- Founder Profile -->
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-sm interactive-card" data-aos="fade-right" data-aos-duration="800">
+          <div class="flex items-start gap-4">
+            <div class="w-16 h-16 rounded-2xl bg-emerald-800 text-yellow-300 flex items-center justify-center text-2xl shrink-0 shadow-md">
+              <i class="fa-solid fa-monument"></i>
+            </div>
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-emerald-700 block">Founder Chairman</span>
+              <h4 class="text-xl font-bold text-slate-900">Late Hon. Shri. Shankarraoji Genuji Kolhe</h4>
+              <p class="text-xs font-medium text-slate-500">Ex-Minister, Government of Maharashtra</p>
+            </div>
+          </div>
+          <p class="text-slate-600 text-sm mt-4 leading-relaxed">
+            The architect of the cooperative agro-industrial movement in the Godavari canal belt. Under his vision, <strong>The Sanjivani (Takli) S.S.S.K. Ltd.</strong> was registered in October 1960. He pioneered integrated byproduct utilization — proving that a sugar factory can yield alcohol, paper, organic chemicals, pharmaceuticals, and power.
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-200 flex items-center gap-2 text-xs text-slate-500">
+            <i class="fa-solid fa-calendar-check text-emerald-600"></i>
+            <span>Registered: 28th October, 1960 &bull; First Season: Nov 1963</span>
+          </div>
+        </div>
+
+        <!-- Current Chairman Profile -->
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-sm interactive-card" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
+          <div class="flex items-start gap-4">
+            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-yellow-500 to-amber-600 text-slate-950 flex items-center justify-center text-2xl shrink-0 shadow-md">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-amber-700 block">Current Chairman</span>
+              <h4 class="text-xl font-bold text-slate-900">Shri. Vivek Bipin Kolhe</h4>
+              <p class="text-xs font-medium text-slate-500">Chairman, Board of Directors</p>
+            </div>
+          </div>
+          <p class="text-slate-600 text-sm mt-4 leading-relaxed">
+            Leading Sanjivani into the next era of smart agriculture, automation, green hydrogen/CBG expansion, and high-recovery cane cultivation. Under his leadership, the factory ensures prompt FRP payments directly into farmers' accounts, subsidized drip irrigation schemes, and this <strong>Model Context Protocol AI Assistant</strong>.
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-200 flex items-center gap-2 text-xs text-slate-500">
+            <i class="fa-solid fa-microchip text-yellow-600"></i>
+            <span>Spearheading Digital Transformation & Farmer Empowerment</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================== -->
+  <!-- INDUSTRIAL DIVISIONS & PRODUCTS (Directly from sanjivanisugarfactory.com) -->
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- OUR PRODUCTS SECTION (Exact layout & images from sanjivanisugarfactory.com) -->
+  <!-- ============================================================== -->
+  <section id="divisions" class="py-16 bg-slate-50/80 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header matching sanjivanisugarfactory.com -->
+      <div class="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
+        <span class="text-emerald-600 text-xs sm:text-sm font-bold tracking-wide uppercase block">Product we provide</span>
+        <h3 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight mt-1">Our Products</h3>
+        <p class="text-slate-500 text-sm mt-3">
+          Manufacturing international standard sugar, green fuel ethanol, organic chemicals, pharmaceuticals, and renewable power.
+        </p>
+      </div>
+
+      <!-- 6 Product Cards Grid matching the official website design -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5 sm:gap-6 items-stretch">
+        
+        <!-- 1. Raw Sugar -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group interactive-card overflow-hidden pb-6" data-aos="fade-up" data-aos-delay="100">
+          <div>
+            <div class="h-44 sm:h-48 bg-white p-4 flex items-center justify-center overflow-hidden">
+              <img 
+                src="/images/sugar.jpg" 
+                alt="Raw Sugar - Sanjivani Sugar Factory" 
+                class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-sm"
+              />
+            </div>
+            <!-- Overlapping Circle Icon Badge -->
+            <div class="relative flex justify-center -mt-6 mb-2">
+              <div class="w-12 h-12 rounded-full bg-white border-2 border-emerald-500 flex items-center justify-center text-emerald-600 shadow-md group-hover:bg-emerald-600 group-hover:text-white transition duration-300">
+                <i class="fa-solid fa-seedling text-lg"></i>
+              </div>
+            </div>
+            <div class="px-4 text-center">
+              <h4 class="text-base font-extrabold text-slate-900 group-hover:text-emerald-700 transition">Raw Sugar</h4>
+              <p class="text-[11px] text-emerald-700 font-semibold mt-0.5">4,500 TCD Milling</p>
+              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                Plantation White (M-30, S-30) and sulfur-free Raw Sugar for global exports.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Ethanol -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group interactive-card overflow-hidden pb-6" data-aos="fade-up" data-aos-delay="150">
+          <div>
+            <div class="h-44 sm:h-48 bg-white p-4 flex items-center justify-center overflow-hidden">
+              <img 
+                src="/images/ethanol.jpg" 
+                alt="Ethanol - Sanjivani Sugar Factory" 
+                class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-sm"
+              />
+            </div>
+            <!-- Overlapping Circle Icon Badge -->
+            <div class="relative flex justify-center -mt-6 mb-2">
+              <div class="w-12 h-12 rounded-full bg-white border-2 border-emerald-500 flex items-center justify-center text-emerald-600 shadow-md group-hover:bg-emerald-600 group-hover:text-white transition duration-300">
+                <i class="fa-solid fa-seedling text-lg"></i>
+              </div>
+            </div>
+            <div class="px-4 text-center">
+              <h4 class="text-base font-extrabold text-slate-900 group-hover:text-emerald-700 transition">Ethanol</h4>
+              <p class="text-[11px] text-emerald-700 font-semibold mt-0.5">100+ KLPD Capacity</p>
+              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                Fuel-grade anhydrous ethanol contributing to India's 20% petrol blending (EBP).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Chemical -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group interactive-card overflow-hidden pb-6" data-aos="fade-up" data-aos-delay="200">
+          <div>
+            <div class="h-44 sm:h-48 bg-white p-4 flex items-center justify-center overflow-hidden">
+              <img 
+                src="/images/chemical.jpg" 
+                alt="Chemicals - Sanjivani Sugar Factory" 
+                class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-sm"
+              />
+            </div>
+            <!-- Overlapping Circle Icon Badge -->
+            <div class="relative flex justify-center -mt-6 mb-2">
+              <div class="w-12 h-12 rounded-full bg-white border-2 border-emerald-500 flex items-center justify-center text-emerald-600 shadow-md group-hover:bg-emerald-600 group-hover:text-white transition duration-300">
+                <i class="fa-solid fa-seedling text-lg"></i>
+              </div>
+            </div>
+            <div class="px-4 text-center">
+              <h4 class="text-base font-extrabold text-slate-900 group-hover:text-emerald-700 transition">Chemical</h4>
+              <p class="text-[11px] text-emerald-700 font-semibold mt-0.5">Organic Solvents</p>
+              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                Acetic Acid, Ethyl Acetate, and Acetic Anhydride for paints, polymers & fibers.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Distillery -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group interactive-card overflow-hidden pb-6" data-aos="fade-up" data-aos-delay="250">
+          <div>
+            <div class="h-44 sm:h-48 bg-white p-4 flex items-center justify-center overflow-hidden">
+              <img 
+                src="/images/spirit.jpg" 
+                alt="Distillery - Sanjivani Sugar Factory" 
+                class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-sm"
+              />
+            </div>
+            <!-- Overlapping Circle Icon Badge -->
+            <div class="relative flex justify-center -mt-6 mb-2">
+              <div class="w-12 h-12 rounded-full bg-white border-2 border-emerald-500 flex items-center justify-center text-emerald-600 shadow-md group-hover:bg-emerald-600 group-hover:text-white transition duration-300">
+                <i class="fa-solid fa-seedling text-lg"></i>
+              </div>
+            </div>
+            <div class="px-4 text-center">
+              <h4 class="text-base font-extrabold text-slate-900 group-hover:text-emerald-700 transition">Distillery</h4>
+              <p class="text-[11px] text-emerald-700 font-semibold mt-0.5">Spirits & ENA</p>
+              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                Extra Neutral Alcohol (ENA), Rectified Spirit, and branded potable spirits.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Pharma -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group interactive-card overflow-hidden pb-6" data-aos="fade-up" data-aos-delay="300">
+          <div>
+            <div class="h-44 sm:h-48 bg-white p-4 flex items-center justify-center overflow-hidden">
+              <img 
+                src="/images/pharma.jpg" 
+                alt="Pharma Intermediates - Sanjivani Sugar Factory" 
+                class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-sm"
+              />
+            </div>
+            <!-- Overlapping Circle Icon Badge -->
+            <div class="relative flex justify-center -mt-6 mb-2">
+              <div class="w-12 h-12 rounded-full bg-white border-2 border-emerald-500 flex items-center justify-center text-emerald-600 shadow-md group-hover:bg-emerald-600 group-hover:text-white transition duration-300">
+                <i class="fa-solid fa-seedling text-lg"></i>
+              </div>
+            </div>
+            <div class="px-4 text-center">
+              <h4 class="text-base font-extrabold text-slate-900 group-hover:text-emerald-700 transition">Pharma</h4>
+              <p class="text-[11px] text-emerald-700 font-semibold mt-0.5">TEO & EMME</p>
+              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                Speciality chemical intermediates synthesized for life-saving bulk pharmaceuticals.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Bio Gas -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group interactive-card overflow-hidden pb-6" data-aos="fade-up" data-aos-delay="350">
+          <div>
+            <div class="h-44 sm:h-48 bg-white p-4 flex items-center justify-center overflow-hidden">
+              <img 
+                src="/images/biogas.png" 
+                alt="Bio Gas & Green Energy - Sanjivani Sugar Factory" 
+                class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-sm"
+              />
+            </div>
+            <!-- Overlapping Circle Icon Badge -->
+            <div class="relative flex justify-center -mt-6 mb-2">
+              <div class="w-12 h-12 rounded-full bg-white border-2 border-emerald-500 flex items-center justify-center text-emerald-600 shadow-md group-hover:bg-emerald-600 group-hover:text-white transition duration-300">
+                <i class="fa-solid fa-seedling text-lg"></i>
+              </div>
+            </div>
+            <div class="px-4 text-center">
+              <h4 class="text-base font-extrabold text-slate-900 group-hover:text-emerald-700 transition">Bio Gas</h4>
+              <p class="text-[11px] text-emerald-700 font-semibold mt-0.5">30 MW Co-Gen & CBG</p>
+              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                Scrubbed biomethane, Compressed Bio-Gas (CBG), and 30 MW green bagasse electricity.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================== -->
+  <!-- LIVE FARMER DATABASE (PostgreSQL & MCP Tool Endpoint) -->
+  <!-- ============================================================== -->
+  <section id="records" class="py-16 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+        <div>
+          <span class="text-emerald-700 text-xs font-bold uppercase tracking-wider">Farmer Cane Billing & Delivery Ledger</span>
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Sanjivani Factory Farmer Database</h3>
+          <p class="text-slate-500 text-sm mt-1">
+            Connected live to PostgreSQL database <code class="bg-slate-100 text-emerald-800 px-2 py-0.5 rounded font-mono text-xs">sugur_factory.farmers</code> via Model Context Protocol (MCP).
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3">
+          <button onclick="openAddFarmerModal()" class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-green-700 hover:from-emerald-700 hover:to-green-800 text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 active:translate-y-0">
+            <i class="fa-solid fa-user-plus text-yellow-300"></i>
+            <span>+ Add Farmer Record</span>
+          </button>
+          <button onclick="loadFarmerData()" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold px-3 py-2 rounded-lg border border-slate-300 transition transform hover:-translate-y-0.5 active:translate-y-0">
+            <i class="fa-solid fa-arrows-rotate"></i>
+            <span>Refresh</span>
+          </button>
+          <button onclick="toggleChat(true)" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold px-3.5 py-2 rounded-lg shadow-sm transition transform hover:-translate-y-0.5 active:translate-y-0">
+            <i class="fa-solid fa-comments text-yellow-300"></i>
+            <span>Ask AI</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Table Container -->
+      <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm bg-white hover:shadow-md transition duration-300">
+        <table class="w-full text-left border-collapse text-sm">
+          <thead>
+            <tr class="bg-slate-50 text-slate-600 border-b border-slate-200 text-xs font-bold uppercase tracking-wider">
+              <th class="py-3 px-4">Farmer ID</th>
+              <th class="py-3 px-4">Farmer Name</th>
+              <th class="py-3 px-4">Village (गाव)</th>
+              <th class="py-3 px-4 text-right">Supply (Tonnes)</th>
+              <th class="py-3 px-4 text-center">Payment Status</th>
+              <th class="py-3 px-4 text-center">Action</th>
+            </tr>
+          </thead>
+          <tbody id="farmerTableBody" class="divide-y divide-slate-100">
+            <!-- Rows injected dynamically by loadFarmerData() -->
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-slate-400 mt-3 text-right">
+        * Official records queried by MCP tool <code>get_farmer_records</code> from PostgreSQL table <code>farmers</code>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================== -->
+  <!-- CONTACT & FACTORY LOCATION SECTION -->
+  <!-- ============================================================== -->
+  <section id="contact" class="py-16 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div>
+          <span class="text-emerald-700 text-xs font-extrabold uppercase tracking-wider">Get in Touch</span>
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Factory Address & Contact</h3>
+          <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+            For sugarcane crushing registration, FRP payment status, seed cane availability, or chemical/ethanol purchase inquiries, reach out to our administrative headquarters at Sahajanandnagar.
+          </p>
+          <div class="space-y-4 mt-6 text-sm text-slate-700">
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-location-dot text-emerald-700 text-lg mt-1"></i>
+              <div>
+                <strong>Sahakar Maharshi Shankarrao Kolhe Sahakari Sakhar Karkhana Ltd.</strong><br/>
+                Sahajanandnagar, P.O. Shingnapur - 423603, Taluka: Kopargaon,<br/>
+                District: Ahilyanagar (Ahmednagar), Maharashtra, India.
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-phone text-emerald-700 text-lg"></i>
+              <div>+91 2423 222301 / 222302 / 222303</div>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-envelope text-emerald-700 text-lg"></i>
+              <div>info@sanjivanisugarfactory.com &bull; sanjivanisugar@gmail.com</div>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-globe text-emerald-700 text-lg"></i>
+              <a href="https://www.sanjivanisugarfactory.com" target="_blank" class="text-emerald-700 hover:underline font-semibold">
+                www.sanjivanisugarfactory.com
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <h4 class="font-bold text-slate-800 text-base mb-2">Cane Harvest & Weighbridge Desk</h4>
+            <p class="text-xs text-slate-500 mb-4 leading-relaxed">
+              Real-time weighing, GPS-fitted harvester tracking, and direct DBT bill settlement support for all Kopargaon zone farmers.
+            </p>
+            <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-xl text-xs space-y-2 text-emerald-950">
+              <div><strong>Weighbridge Timings:</strong> 24x7 during active crushing season.</div>
+              <div><strong>Farmer DBT Helpline:</strong> Extension 104 / 108.</div>
+              <div><strong>Agriculture Extension Office:</strong> Hall No. 3, Sahajanandnagar.</div>
+            </div>
+          </div>
+          <div class="pt-4">
+            <button onclick="toggleChat(true)" class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs py-3 rounded-xl transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-robot text-yellow-300"></i>
+              <span>Open 24/7 Sanjivani AI Assistant Desk</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div class="flex items-center space-x-2">
+        <i class="fa-solid fa-seedling text-yellow-400 text-lg"></i>
+        <span class="font-bold text-white">Sahakar Maharshi Shankarrao Kolhe S.S.K. Ltd. &bull; Kopargaon</span>
+      </div>
+      <p class="text-xs">
+        &copy; 1960–2026 Sanjivani Sugar Factory &bull; Model Context Protocol (MCP) & OpenAI Responses API
+      </p>
+    </div>
+  </footer>
+
+  <!-- ============================================================== -->
+  <!-- ADD FARMER MODAL -->
+  <!-- ============================================================== -->
+  <div id="addFarmerModal" class="fixed inset-0 z-50 hidden bg-slate-950/60 backdrop-blur-sm items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-2xl border border-slate-200 max-w-lg w-full overflow-hidden">
+      
+      <!-- Modal Header -->
+      <div class="bg-gradient-to-r from-emerald-800 to-sanjivani-dark p-5 text-white flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-xl bg-emerald-600/60 border border-emerald-400/40 flex items-center justify-center text-yellow-300 shadow">
+            <i class="fa-solid fa-user-plus text-lg"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-base tracking-tight">New Farmer Cane Registration</h3>
+            <p class="text-xs text-emerald-200">नवीन शेतकरी ऊस आवक नोंदणी &bull; PostgreSQL</p>
+          </div>
+        </div>
+        <button type="button" onclick="closeAddFarmerModal()" class="text-emerald-200 hover:text-white p-2 rounded-lg hover:bg-white/10 transition">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Modal Form Body -->
+      <form id="addFarmerForm" onsubmit="handleAddFarmerSubmit(event)" class="p-6 space-y-4">
+        
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
+            Farmer Name (शेतकऱ्याचे नाव) <span class="text-red-500">*</span>
+          </label>
+          <input 
+            type="text" 
+            id="newFarmerName" 
+            required 
+            placeholder="e.g. Rameshwar Deshmukh" 
+            class="w-full bg-slate-50 border border-slate-300 focus:border-emerald-600 focus:bg-white text-slate-800 text-sm px-3.5 py-2.5 rounded-xl focus:outline-none transition"
+          />
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
+              Village (गाव) <span class="text-red-500">*</span>
+            </label>
+            <select 
+              id="newFarmerVillage" 
+              required
+              class="w-full bg-slate-50 border border-slate-300 focus:border-emerald-600 focus:bg-white text-slate-800 text-sm px-3.5 py-2.5 rounded-xl focus:outline-none transition"
+            >
+              <option value="Kopargaon">Kopargaon (कोपरगाव)</option>
+              <option value="Yeola">Yeola (येवला)</option>
+              <option value="Rahata">Rahata (राहाता)</option>
+              <option value="Shirdi">Shirdi (शिर्डी)</option>
+              <option value="Godhegaon">Godhegaon (गोधेगाव)</option>
+              <option value="Sangamner">Sangamner (संगमनेर)</option>
+              <option value="Niphad">Niphad (निफाड)</option>
+              <option value="Pohegaon">Pohegaon (पोहेगाव)</option>
+              <option value="Kolpewadi">Kolpewadi (कोळपेवाडी)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
+              Supply Tonnes (ऊस वजन - टन) <span class="text-red-500">*</span>
+            </label>
+            <div class="relative">
+              <input 
+                type="number" 
+                id="newSupplyTonnes" 
+                step="0.01" 
+                min="0.1" 
+                required 
+                placeholder="145.50" 
+                class="w-full bg-slate-50 border border-slate-300 focus:border-emerald-600 focus:bg-white text-slate-800 text-sm px-3.5 py-2.5 rounded-xl focus:outline-none transition pr-12 font-mono font-semibold"
+              />
+              <span class="absolute right-3.5 top-2.5 text-xs text-slate-400 font-bold">MT</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
+              Payment Status <span class="text-red-500">*</span>
+            </label>
+            <select 
+              id="newPaymentStatus" 
+              required
+              class="w-full bg-slate-50 border border-slate-300 focus:border-emerald-600 focus:bg-white text-slate-800 text-sm px-3.5 py-2.5 rounded-xl focus:outline-none transition"
+            >
+              <option value="Pending">Pending (प्रलंबित)</option>
+              <option value="Paid">Paid (पूर्ण अदा)</option>
+              <option value="Partial">Partial (अंशतः अदा)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
+              Sugarcane Variety (वाण)
+            </label>
+            <select 
+              id="newSugarcaneVariety"
+              class="w-full bg-slate-50 border border-slate-300 focus:border-emerald-600 focus:bg-white text-slate-800 text-sm px-3.5 py-2.5 rounded-xl focus:outline-none transition"
+            >
+              <option value="Co-86032">Co-86032 (नयन)</option>
+              <option value="CoM-0265">CoM-0265 (फुले २६५)</option>
+              <option value="Co-8005">Co-8005</option>
+              <option value="VSI-434">VSI-434</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
+            Mobile Number (मोबाईल क्रमांक)
+          </label>
+          <input 
+            type="tel" 
+            id="newMobileNumber" 
+            placeholder="9876543210" 
+            maxlength="10" 
+            class="w-full bg-slate-50 border border-slate-300 focus:border-emerald-600 focus:bg-white text-slate-800 text-sm px-3.5 py-2.5 rounded-xl focus:outline-none transition font-mono"
+          />
+        </div>
+
+        <div id="formErrorMessage" class="hidden text-xs text-red-600 bg-red-50 p-2.5 rounded-lg border border-red-200"></div>
+
+        <div class="pt-3 border-t border-slate-200 flex items-center justify-end gap-3">
+          <button 
+            type="button" 
+            onclick="closeAddFarmerModal()" 
+            class="px-4 py-2 text-xs font-semibold text-slate-600 hover:text-slate-800 hover:bg-slate-100 rounded-xl transition"
+          >
+            Cancel
+          </button>
+          <button 
+            type="submit" 
+            id="submitFarmerBtn"
+            class="bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold px-5 py-2.5 rounded-xl shadow-md transition flex items-center gap-2"
+          >
+            <i class="fa-solid fa-floppy-disk"></i>
+            <span>Save to Database</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- ATTRACTIVE FLOATING CHATBOT WIDGET -->
+  <!-- ============================================================== -->
+  <div id="chatWidgetContainer" class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+    
+    <!-- Chat Window Card with Pop-in Animation -->
+    <div id="chatWindow" class="hidden w-[92vw] sm:w-[450px] h-[610px] max-h-[85vh] bg-white rounded-2xl shadow-2xl border border-slate-200 flex-col overflow-hidden mb-4 transition-all duration-300 animate-pop-in">
+      
+      <!-- Chat Header -->
+      <div class="bg-gradient-to-r from-emerald-800 via-sanjivani-dark to-slate-900 p-4 text-white flex items-center justify-between shadow-md">
+        <div class="flex items-center space-x-3">
+          <div class="relative">
+            <div class="w-10 h-10 rounded-xl bg-emerald-600/60 border border-emerald-400/40 flex items-center justify-center text-yellow-300 shadow">
+              <i class="fa-solid fa-robot text-lg"></i>
+            </div>
+            <span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-green-400 border-2 border-slate-900 rounded-full animate-pulse"></span>
+          </div>
+          <div>
+            <h4 class="font-bold text-sm tracking-tight flex items-center gap-1.5">
+              Sanjivani Factory AI Desk
+              <span class="text-[10px] bg-yellow-400/20 text-yellow-300 border border-yellow-400/30 font-semibold px-1.5 py-0.2 rounded">MCP</span>
+            </h4>
+            <p class="text-[11px] text-emerald-200">Kopargaon Farmers & Operations Assistant</p>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-1">
+          <button onclick="clearChat()" title="Clear Chat History" class="text-emerald-200 hover:text-white p-2 rounded-lg hover:bg-white/10 transition">
+            <i class="fa-solid fa-trash-can text-xs"></i>
+          </button>
+          <button onclick="toggleChat(false)" title="Minimize" class="text-emerald-200 hover:text-white p-2 rounded-lg hover:bg-white/10 transition">
+            <i class="fa-solid fa-xmark text-sm"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Suggestion Chips Header (Bilingual English & Devanagari Marathi) -->
+      <div class="bg-slate-50 border-b border-slate-200 px-3 py-2 overflow-x-auto whitespace-nowrap flex gap-1.5 text-xs">
+        <button onclick="askPrompt('कोणत्या शेतकऱ्यांचे १०० टनांपेक्षा जास्त ऊस पुरवठा असून पेमेंट प्रलंबित आहे?')" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-900 border border-emerald-300 px-2.5 py-1 rounded-full font-medium transition hover:scale-105 shrink-0">
+          🌾 >१००t प्रलंबित (मराठी)
+        </button>
+        <button onclick="askPrompt('Which farmers supplied more than 100 tonnes of sugarcane and have pending payments? Show their names, villages, supply quantities, and payment status.')" class="bg-white hover:bg-emerald-50 text-emerald-800 border border-emerald-200 px-2.5 py-1 rounded-full font-medium transition hover:scale-105 shrink-0">
+          🌾 >100t & Pending
+        </button>
+        <button onclick="askPrompt('कारखान्याचे अध्यक्ष श्री. विवेक कोल्हे यांच्याविषयी माहिती द्या.')" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-900 border border-emerald-300 px-2.5 py-1 rounded-full font-medium transition hover:scale-105 shrink-0">
+          👤 अध्यक्ष (मराठी)
+        </button>
+        <button onclick="askPrompt('Tell me about Chairman Vivek Kolhe and Founder Shankarrao Kolhe.')" class="bg-white hover:bg-emerald-50 text-emerald-800 border border-emerald-200 px-2.5 py-1 rounded-full font-medium transition hover:scale-105 shrink-0">
+          👤 Leadership
+        </button>
+        <button onclick="askPrompt('What are the main products and industrial divisions of Sanjivani Sugar Factory?')" class="bg-white hover:bg-emerald-50 text-emerald-800 border border-emerald-200 px-2.5 py-1 rounded-full font-medium transition hover:scale-105 shrink-0">
+          🏢 Divisions
+        </button>
+        <button onclick="askPrompt('Who supplied the maximum sugarcane in tonnes this season?')" class="bg-white hover:bg-emerald-50 text-emerald-800 border border-emerald-200 px-2.5 py-1 rounded-full font-medium transition hover:scale-105 shrink-0">
+          🏆 Top Supplier
+        </button>
+      </div>
+
+      <!-- Messages Scroll Area -->
+      <div id="chatMessages" class="flex-1 p-4 overflow-y-auto space-y-4 bg-slate-50/60 text-sm">
+        
+        <!-- Welcome Message -->
+        <div class="flex items-start gap-2.5 animate-pop-in">
+          <div class="w-8 h-8 rounded-lg bg-emerald-700 text-yellow-300 flex items-center justify-center text-xs shrink-0 shadow-sm">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <div class="chat-bubble-bot p-3.5 rounded-2xl rounded-tl-none shadow-sm max-w-[85%] text-slate-800">
+            <p class="font-semibold text-emerald-900 mb-1">नमस्कार! Welcome to Sanjivani Factory Assistant 🙏</p>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              I am your AI assistant for <strong>Sahakar Maharshi Shankarrao Kolhe Sahakari Sakhar Karkhana Ltd. (The Sanjivani Sugar Factory, Kopargaon)</strong>.
+            </p>
+            <p class="text-xs text-slate-600 mt-2">
+              Connected live via <strong>Model Context Protocol (MCP)</strong> to PostgreSQL. Ask me about farmer deliveries, payment ledger statuses, factory divisions, or Chairman Shri Vivek Kolhe!
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Typing Indicator -->
+      <div id="typingIndicator" class="hidden px-4 py-2 bg-slate-50/80 flex items-center gap-2 text-xs text-slate-500 border-t border-slate-100">
+        <div class="flex items-center space-x-1">
+          <div class="w-2 h-2 rounded-full bg-emerald-600 pulsing-dot"></div>
+          <div class="w-2 h-2 rounded-full bg-emerald-600 pulsing-dot"></div>
+          <div class="w-2 h-2 rounded-full bg-emerald-600 pulsing-dot"></div>
+        </div>
+        <span id="typingText" class="font-medium text-emerald-700">Querying MCP Server & PostgreSQL...</span>
+      </div>
+
+      <!-- Input Bar -->
+      <div class="p-3 bg-white border-t border-slate-200">
+        <form id="chatForm" onsubmit="handleChatSubmit(event)" class="flex items-center gap-2">
+          <input 
+            type="text" 
+            id="chatInput" 
+            placeholder="Ask about farmers, tonnage, payments, factory..." 
+            class="flex-1 bg-slate-100 hover:bg-slate-50 focus:bg-white text-slate-800 text-sm px-4 py-2.5 rounded-xl border border-slate-200 focus:border-emerald-600 focus:outline-none transition"
+            autocomplete="off"
+          />
+          <button 
+            type="submit" 
+            id="sendBtn"
+            class="bg-emerald-700 hover:bg-emerald-800 text-white w-10 h-10 rounded-xl flex items-center justify-center shadow-md transition disabled:opacity-50 hover:scale-105 active:scale-95"
+          >
+            <i class="fa-solid fa-paper-plane text-sm"></i>
+          </button>
+        </form>
+        <div class="flex items-center justify-between text-[10px] text-slate-400 mt-2 px-1">
+          <span>MCP Protocol &bull; OpenAI Responses API</span>
+          <span class="flex items-center gap-1 text-emerald-700 font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-ping"></span> Live PostgreSQL
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Floating Toggle Button with Radar Ping Pulse -->
+    <div class="relative group">
+      <span class="absolute -inset-1 rounded-full bg-emerald-400 opacity-60 animate-ping pointer-events-none"></span>
+      <button 
+        id="chatToggleBtn" 
+        onclick="toggleChat()" 
+        class="relative bg-gradient-to-r from-emerald-700 to-green-900 hover:from-emerald-800 hover:to-green-950 text-white rounded-full p-4 shadow-xl shadow-emerald-950/30 flex items-center gap-3 border-2 border-yellow-400/60 hover:scale-105 active:scale-95 transition-all duration-300 shimmer-badge"
+      >
+        <div class="relative">
+          <i class="fa-solid fa-comments text-2xl text-yellow-300"></i>
+          <span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-yellow-400 rounded-full border-2 border-emerald-900 animate-pulse"></span>
+        </div>
+        <span class="hidden sm:inline font-bold text-sm tracking-wide pr-1">Ask Sanjivani AI</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Client-side Script -->
+  <script>
+    const fallbackFarmers = [
+      { farmer_id: 1, farmer_name: "Rahul Patil", village: "Godhegaon", supply_tonnes: "125.50", payment_status: "Pending" },
+      { farmer_id: 2, farmer_name: "Suresh Shinde", village: "Kopargaon", supply_tonnes: "85.00", payment_status: "Paid" },
+      { farmer_id: 3, farmer_name: "Vijay Jadhav", village: "Yeola", supply_tonnes: "150.00", payment_status: "Pending" },
+      { farmer_id: 4, farmer_name: "Anil More", village: "Shirdi", supply_tonnes: "95.75", payment_status: "Paid" },
+      { farmer_id: 5, farmer_name: "Prakash Pawar", village: "Rahata", supply_tonnes: "180.00", payment_status: "Partial" },
+      { farmer_id: 6, farmer_name: "Ganesh Kale", village: "Niphad", supply_tonnes: "72.50", payment_status: "Paid" },
+      { farmer_id: 7, farmer_name: "Ramesh Wagh", village: "Sangamner", supply_tonnes: "135.00", payment_status: "Pending" },
+      { farmer_id: 8, farmer_name: "Sachin Gaikwad", village: "Kopargaon", supply_tonnes: "110.00", payment_status: "Paid" },
+      { farmer_id: 9, farmer_name: "Dinesh Borse", village: "Rahata", supply_tonnes: "90.00", payment_status: "Pending" },
+      { farmer_id: 10, farmer_name: "Mahesh Chavan", village: "Yeola", supply_tonnes: "160.50", payment_status: "Paid" }
+    ];
+
+    let cachedFarmers = [];
+
+    // Load farmer records from PostgreSQL API
+    async function loadFarmerData() {
+      const tbody = document.getElementById('farmerTableBody');
+      tbody.innerHTML = `<tr><td colspan="6" class="text-center py-6 text-slate-400"><i class="fa-solid fa-spinner fa-spin mr-2"></i>Loading records from PostgreSQL...</td></tr>`;
+
+      try {
+        const res = await fetch('/api/farmers');
+        if (res.ok) {
+          const data = await res.json();
+          cachedFarmers = data.farmers || fallbackFarmers;
+        } else {
+          cachedFarmers = fallbackFarmers;
+        }
+      } catch (err) {
+        cachedFarmers = fallbackFarmers;
+      }
+
+      renderTable(cachedFarmers);
+    }
+
+    function renderTable(farmers) {
+      const tbody = document.getElementById('farmerTableBody');
+      tbody.innerHTML = '';
+
+      farmers.forEach(f => {
+        let statusBadge = '';
+        if (f.payment_status === 'Paid') {
+          statusBadge = '<span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full border border-green-200"><i class="fa-solid fa-check mr-1"></i>Paid</span>';
+        } else if (f.payment_status === 'Pending') {
+          statusBadge = '<span class="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded-full border border-red-200"><i class="fa-solid fa-clock mr-1"></i>Pending</span>';
+        } else {
+          statusBadge = '<span class="bg-amber-100 text-amber-800 text-xs font-semibold px-2.5 py-0.5 rounded-full border border-amber-200"><i class="fa-solid fa-hourglass-half mr-1"></i>Partial</span>';
+        }
+
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-slate-50/80 transition';
+        tr.innerHTML = `
+          <td class="py-3 px-4 font-mono text-xs text-slate-500 font-bold">#${f.farmer_id}</td>
+          <td class="py-3 px-4 font-semibold text-slate-800">${f.farmer_name}</td>
+          <td class="py-3 px-4 text-slate-600">${f.village}</td>
+          <td class="py-3 px-4 text-right font-mono font-bold text-slate-900">${parseFloat(f.supply_tonnes).toFixed(2)} MT</td>
+          <td class="py-3 px-4 text-center">${statusBadge}</td>
+          <td class="py-3 px-4 text-center">
+            <button onclick="askFarmerQuery('${f.farmer_name}')" class="text-xs text-emerald-700 hover:text-emerald-900 hover:underline font-semibold">
+              Query AI
+            </button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // Modal Functions for adding a new farmer record
+    function openAddFarmerModal() {
+      const modal = document.getElementById('addFarmerModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.getElementById('newFarmerName').focus();
+    }
+
+    function closeAddFarmerModal() {
+      const modal = document.getElementById('addFarmerModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.getElementById('formErrorMessage').classList.add('hidden');
+      document.getElementById('addFarmerForm').reset();
+    }
+
+    async function handleAddFarmerSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('newFarmerName').value.trim();
+      const village = document.getElementById('newFarmerVillage').value;
+      const supply = parseFloat(document.getElementById('newSupplyTonnes').value);
+      const status = document.getElementById('newPaymentStatus').value;
+      const variety = document.getElementById('newSugarcaneVariety').value;
+      const mobile = document.getElementById('newMobileNumber').value.trim();
+
+      const errEl = document.getElementById('formErrorMessage');
+      const btn = document.getElementById('submitFarmerBtn');
+
+      if (!name || isNaN(supply) || supply <= 0) {
+        errEl.textContent = 'Please fill in all required fields with valid values.';
+        errEl.classList.remove('hidden');
+        return;
+      }
+
+      errEl.classList.add('hidden');
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-1"></i> Saving to Database...';
+
+      try {
+        const res = await fetch('/api/farmers', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            farmer_name: name,
+            village: village,
+            supply_tonnes: supply,
+            payment_status: status,
+            sugarcane_variety: variety,
+            mobile_number: mobile || null
+          })
+        });
+
+        const data = await res.json();
+        if (!res.ok) {
+          throw new Error(data.error || 'Failed to save farmer record.');
+        }
+
+        closeAddFarmerModal();
+        await loadFarmerData();
+
+        // Notify user via AI Chatbot widget
+        toggleChat(true);
+        appendBotMessage(`🌾 **New Farmer Record Successfully Saved in PostgreSQL!**\n\n• **Farmer ID:** #${data.farmer.farmer_id}\n• **Name:** **${data.farmer.farmer_name}**\n• **Village:** ${data.farmer.village}\n• **Supply:** **${data.farmer.supply_tonnes} tonnes**\n• **Payment Status:** *${data.farmer.payment_status}*\n• **Variety:** ${data.farmer.sugarcane_variety || 'Co-86032'}\n\nOur MCP Server has registered this row. You can now query it directly!`);
+      } catch (err) {
+        errEl.textContent = err.message || 'Error saving record to PostgreSQL.';
+        errEl.classList.remove('hidden');
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-floppy-disk mr-1"></i> Save to Database';
+      }
+    }
+
+    function askFarmerQuery(name) {
+      toggleChat(true);
+      askPrompt(`Give me the details of farmer ${name} including supply tonnage, village, and payment status.`);
+    }
+
+    // Toggle Chat visibility
+    function toggleChat(forceOpen) {
+      const chatWindow = document.getElementById('chatWindow');
+      if (forceOpen === true) {
+        chatWindow.classList.remove('hidden');
+        chatWindow.classList.add('flex');
+        document.getElementById('chatInput').focus();
+      } else if (forceOpen === false) {
+        chatWindow.classList.add('hidden');
+        chatWindow.classList.remove('flex');
+      } else {
+        if (chatWindow.classList.contains('hidden')) {
+          chatWindow.classList.remove('hidden');
+          chatWindow.classList.add('flex');
+          document.getElementById('chatInput').focus();
+        } else {
+          chatWindow.classList.add('hidden');
+          chatWindow.classList.remove('flex');
+        }
+      }
+    }
+
+    function clearChat() {
+      const messagesContainer = document.getElementById('chatMessages');
+      messagesContainer.innerHTML = `
+        <div class="flex items-start gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-emerald-700 text-yellow-300 flex items-center justify-center text-xs shrink-0 shadow-sm">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <div class="chat-bubble-bot p-3.5 rounded-2xl rounded-tl-none shadow-sm max-w-[85%] text-slate-800">
+            <p class="font-semibold text-emerald-900 mb-1">Chat cleared.</p>
+            <p class="text-xs text-slate-600 leading-relaxed">Ask any question to search the Sanjivani Sugar Factory database!</p>
+          </div>
+        </div>
+      `;
+    }
+
+    function askPrompt(promptText) {
+      document.getElementById('chatInput').value = promptText;
+      sendMessage(promptText);
+    }
+
+    function handleChatSubmit(e) {
+      e.preventDefault();
+      const input = document.getElementById('chatInput');
+      const text = input.value.trim();
+      if (!text) return;
+      sendMessage(text);
+      input.value = '';
+    }
+
+    function appendUserMessage(text) {
+      const container = document.getElementById('chatMessages');
+      const div = document.createElement('div');
+      div.className = 'flex items-start justify-end gap-2.5 animate-pop-in';
+      div.innerHTML = `
+        <div class="chat-bubble-user text-white p-3.5 rounded-2xl rounded-tr-none shadow-sm max-w-[85%] text-xs sm:text-sm">
+          ${escapeHtml(text)}
+        </div>
+        <div class="w-8 h-8 rounded-lg bg-slate-800 text-white flex items-center justify-center text-xs shrink-0 shadow-sm">
+          <i class="fa-solid fa-user"></i>
+        </div>
+      `;
+      container.appendChild(div);
+      container.scrollTop = container.scrollHeight;
+    }
+
+    function appendBotMessage(text) {
+      const container = document.getElementById('chatMessages');
+      const div = document.createElement('div');
+      div.className = 'flex items-start gap-2.5 animate-pop-in';
+      
+      const formatted = formatMarkdown(text);
+
+      div.innerHTML = `
+        <div class="w-8 h-8 rounded-lg bg-emerald-700 text-yellow-300 flex items-center justify-center text-xs shrink-0 shadow-sm">
+          <i class="fa-solid fa-seedling"></i>
+        </div>
+        <div class="chat-bubble-bot p-3.5 rounded-2xl rounded-tl-none shadow-sm max-w-[88%] text-slate-800 text-xs sm:text-sm leading-relaxed">
+          ${formatted}
+        </div>
+      `;
+      container.appendChild(div);
+      container.scrollTop = container.scrollHeight;
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    function formatMarkdown(text) {
+      let html = escapeHtml(text);
+      html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+      html = html.replace(/^[-\*]\s+(.*)$/gm, '<li class="ml-4 list-disc">$1</li>');
+      html = html.replace(/\n\n/g, '<br/><br/>').replace(/\n/g, '<br/>');
+      return html;
+    }
+
+    async function sendMessage(questionText) {
+      appendUserMessage(questionText);
+
+      const indicator = document.getElementById('typingIndicator');
+      const sendBtn = document.getElementById('sendBtn');
+      indicator.classList.remove('hidden');
+      indicator.classList.add('flex');
+      sendBtn.disabled = true;
+
+      try {
+        const response = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: questionText })
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          appendBotMessage(data.reply);
+        } else {
+          const answer = generateLocalFallbackAnswer(questionText);
+          appendBotMessage(answer);
+        }
+      } catch (err) {
+        const answer = generateLocalFallbackAnswer(questionText);
+        appendBotMessage(answer);
+      } finally {
+        indicator.classList.add('hidden');
+        indicator.classList.remove('flex');
+        sendBtn.disabled = false;
+      }
+    }
+
+    // Local fallback search if OpenAI key is not set
+    function generateLocalFallbackAnswer(query) {
+      const q = query.toLowerCase();
+      const isMarathi = /[\u0900-\u097F]/.test(query);
+      const records = cachedFarmers.length > 0 ? cachedFarmers : fallbackFarmers;
+
+      if (q.includes('chairman') || q.includes('vivek') || query.includes('अध्यक्ष') || query.includes('विवेक')) {
+        return isMarathi
+          ? `**संजीवनी साखर कारखाना नेतृत्व:**<br/>• **अध्यक्ष:** **श्री. विवेक बिपिन कोल्हे** — अध्यक्ष, संचालक मंडळ (सहकार महर्षी शंकरराव कोल्हे स.सा.का.लि., कोपरगाव).<br/>• **संस्थापक:** कै. **शंकररावजी गेणूजी कोल्हे** (माजी मंत्री, महाराष्ट्र शासन).`
+          : `**Leadership of Sanjivani Sugar Factory:**<br/>• **Chairman:** **Shri. Vivek Bipin Kolhe** leads the board of directors and guides the modernization of Sahakar Maharshi Shankarrao Kolhe Sahakari Sakhar Karkhana Ltd.<br/>• **Founder:** Late Hon. **Shri. Shankarraoji Genuji Kolhe** (Ex-Minister, Maharashtra).`;
+      }
+
+      if (q.includes('division') || q.includes('product') || q.includes('ethanol') || q.includes('chemical') || query.includes('विभाग') || query.includes('उत्पादन')) {
+        return isMarathi
+          ? `**महत्त्वाचे औद्योगिक विभाग (sanjivanisugarfactory.com):**<br/>1. **साखर विभाग:** पांढरी स्फटिक साखर (M-30, S-30) व रॉ शुगर (४,५०० TCD).<br/>2. **डिस्टिलरी व इथेनॉल:** फ्युएल इथेनॉल (२०% पेट्रोल ब्लेंड) व ENA.<br/>3. **केमिकल्स:** ॲसिटिक ॲसिड, इथाईल ॲसिटेट, ॲसिटिक ॲनहायड्राइड.<br/>4. **फार्मा विभाग:** TEO व EMME औषधी मध्यस्थ.<br/>5. **ग्रीन पॉवर व बायो-CNG:** ३० मेगावॅट को-जन व कॉम्प्रेस्ड बायोगॅस.<br/>6. **सेंद्रिय खते:** *सल्फाबॅक्ट*, बायो-कंपोस्ट व फॉस्फो-कंपोस्ट.`
+          : `**Key Industrial Divisions (sanjivanisugarfactory.com):**<br/>1. **Sugar Division:** Plantation White Sugar (M-30, S-30) & Raw Sugar (4,500 TCD).<br/>2. **Distillery & Ethanol:** Fuel Ethanol (20% blend) & Extra Neutral Alcohol.<br/>3. **Chemicals:** Acetic Acid, Ethyl Acetate, Acetic Anhydride.<br/>4. **Pharma:** TEO & EMME intermediates.<br/>5. **Green Power & Bio-CNG:** 30 MW Co-gen & Compressed Biogas.<br/>6. **Bio-Fertilizers:** *Sulfabact*, Bio-compost & Phospho-compost.`;
+      }
+
+      if ((q.includes('100') || query.includes('१००')) && (q.includes('pending') || q.includes('payment') || query.includes('प्रलंबित') || query.includes('बाकी') || query.includes('पेमेंट'))) {
+        const matching = records.filter(f => parseFloat(f.supply_tonnes) > 100 && f.payment_status.toLowerCase() === 'pending');
+        if (matching.length === 0) {
+          return isMarathi ? "१०० टनांपेक्षा जास्त ऊस असून प्रलंबित पेमेंट असलेला कोणताही शेतकरी आढळला नाही." : "No farmers found matching >100 tonnes with Pending payments.";
+        }
+        
+        let out = isMarathi 
+          ? "**१०० टनांपेक्षा जास्त ऊस पुरवठा व प्रलंबित पेमेंट असलेले शेतकरी:**<br/><br/>"
+          : "**Farmers who supplied >100 tonnes with Pending payments:**<br/><br/>";
+        
+        matching.forEach(m => {
+          out += isMarathi
+            ? `• **${m.farmer_name}** (${m.village}) — **${m.supply_tonnes} टन** &bull; पेमेंट: *प्रलंबित (Pending)*<br/>`
+            : `• **${m.farmer_name}** (${m.village}) — **${m.supply_tonnes} tonnes** &bull; Status: *Pending*<br/>`;
+        });
+        return out;
+      }
+
+      if (q.includes('paid') || query.includes('अदा') || query.includes('पेड')) {
+        const matching = records.filter(f => f.payment_status.toLowerCase() === 'paid');
+        let out = isMarathi ? "**पूर्ण पेमेंट (Paid) झालेले शेतकरी:**<br/><br/>" : "**Farmers with Paid status:**<br/><br/>";
+        matching.forEach(m => {
+          out += `• **${m.farmer_name}** (${m.village}) — ${m.supply_tonnes} MT<br/>`;
+        });
+        return out;
+      }
+
+      if (q.includes('top') || q.includes('maximum') || q.includes('highest') || query.includes('सर्वाधिक') || query.includes('जास्त')) {
+        const sorted = [...records].sort((a,b) => parseFloat(b.supply_tonnes) - parseFloat(a.supply_tonnes));
+        const top = sorted[0];
+        return isMarathi
+          ? `🏆 **या हंगामातील सर्वाधिक ऊस पुरवठादार:**<br/>🌾 **${top.farmer_name}** (गाव: **${top.village}**) — **${top.supply_tonnes} टन** (स्थिती: ${top.payment_status === 'Paid' ? 'पूर्ण अदा' : 'प्रलंबित'}).`
+          : `**Top Sugarcane Supplier:**<br/>🌾 **${top.farmer_name}** from **${top.village}** supplied **${top.supply_tonnes} tonnes** (Status: ${top.payment_status}).`;
+      }
+
+      return isMarathi
+        ? `मी संजीवनी साखर कारखाना डेटाबेस तपासला. कोपरगाव विभागातील **${records.length} शेतकरी नोंदी** उपलब्ध आहेत. आपण ऊस आवक, पेमेंट, कारखान्याचे विभाग किंवा अध्यक्ष श्री. विवेक कोल्हे यांच्याविषयी प्रश्न विचारू शकता!`
+        : `I queried the Sanjivani Sugar Factory database. Found **${records.length} farmer records** in Kopargaon. Ask about farmers, payments, factory divisions, or Chairman Shri Vivek Kolhe!`;
+    }
+
+    // Number counter animation for hero metrics
+    function animateCounters() {
+      const counters = document.querySelectorAll('.counter');
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        if (!target) return;
+        const duration = 1600;
+        const stepTime = 25;
+        const steps = duration / stepTime;
+        const increment = target / steps;
+        let current = 0;
+
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            counter.innerText = target.toLocaleString('en-IN');
+            clearInterval(timer);
+          } else {
+            counter.innerText = Math.floor(current).toLocaleString('en-IN');
+          }
+        }, stepTime);
+      });
+    }
+
+    // Initialize on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      if (typeof AOS !== 'undefined') {
+        AOS.init({
+          duration: 750,
+          once: true,
+          easing: 'ease-out-cubic'
+        });
+      }
+      animateCounters();
+      loadFarmerData();
+    });
+  </script>
+
+  <!-- AOS (Animate On Scroll) JavaScript -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+</html>
